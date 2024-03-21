@@ -1,0 +1,44 @@
+{
+  "name": "cumrecusandae",
+  "description": "Vue library for building Dapps",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyleLittle/cumrecusandae.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KyleLittle/cumrecusandae.git/issues"
+  },
+  "packageManager": "pnpm@8.6.9",
+  "homepage": "https://github.com/KyleLittle/cumrecusandae.git",
+  "author": "AprilErnser",
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm -F app dev",
+    "build": "pnpm -F core build && pnpm -F modal build && pnpm -F nuxt build && pnpm -F walletconnect build && pnpm -F coinbase build",
+    "build:app": "pnpm -F app build",
+    "format": "prettier --write \"**/*.{vue,ts,js,json}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^8.0.3",
+    "jsdom": "^24.0.0",
+    "lerna": "^8.0.2",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "vite": "5.0.12",
+    "vitest": "^1.2.2"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,json,scss,css,vue}": [
+      "prettier --write"
+    ]
+  },
+  "resolutions": {
+    "@noble/hashes": "1.3.3"
+  },
+  "dependencies": {},
+  "version": "1.0.0"
+}
